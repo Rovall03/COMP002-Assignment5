@@ -21,8 +21,10 @@ function reliableMultiply(a, b) {
     try{
       return primitiveMultiply(a, b);/*return if correct  */
     } catch(errors){/* if error is thrown  run catch*/
- if(!(errors instanceof MultiplicatorUnitFailure))
+ if(!(errors instanceof MultiplicatorUnitFailure)){
   throw errors;
-    }
+}
+ }
+   }
 }
 console.log(reliableMultiply(8, 8)); 
